@@ -74,7 +74,7 @@ def dimacs_to_pysmt(vars_cnt, clauses, comments):
     """
     st = {}
     rev_st = {}
-    for i in xrange(1, vars_cnt+1):
+    for i in range(1, vars_cnt+1):
         s = FreshSymbol(template=("_dimacs_%d"%i+"_%d"))
         st[i] = s
         st[-i] = Not(s)
